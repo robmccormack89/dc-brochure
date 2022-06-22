@@ -18,3 +18,216 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Base Theme is built using Timber WP https://github.com/timber/timber
 */
+
+/* fonts */
+
+.uk-text-decoration-none a:hover {
+  text-decoration: none!important;
+}
+
+html {
+  color: #181818;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6,
+.uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge,
+h1, h2, h3, h4, h5, h6,
+.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
+  font-family: 'Sarabun', sans-serif;
+}
+
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6,
+.uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge,
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+
+.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+/* the rest... */
+
+.uk-text-lead {
+  font-size: 1.125rem;
+}
+.uk-text-secondary {
+  color: #004d74 !important;
+}
+.uk-padding-xsmall {
+  padding: 5px;
+}
+.header-top {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.uk-background-secondary {
+  background-color: #004d74;
+}
+.footer-main.uk-background-secondary {
+  background: linear-gradient(75deg, #00a0c4 0%, #004d74 100%);
+}
+.uk-button-primary {
+  background: #eb4040;
+}
+.uk-background-primary {
+  background-color: #eb4040;
+}
+.footer-bottom-navbar .uk-navbar-item,
+.footer-bottom-navbar .uk-navbar-nav>li>a,
+.footer-bottom-navbar .uk-navbar-toggle {
+  min-height: fit-content;
+}
+.uk-light .uk-text-primary {
+  color: #eb4040 !important;
+}
+.hor-div:before {
+  content: ' ';
+  width: 1.875rem;
+  border-top: 2px solid #eb4040;
+  margin-top: -1px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  display: block;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.hor-div {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 0 0 0.6em;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: normal!important;
+}
+.hero-centered .hor-div {
+  justify-content: center;
+}
+.hero-right .hor-div {
+  justify-content: right;
+}
+.uk-margin-xsmall-right {
+  margin-right: 5px;
+}
+.uk-light .icon-nav .uk-icon-button {
+  background-color: #eb4040;
+  color: #fff;
+}
+.uk-light .icon-nav .uk-icon-button:hover {
+  background-color: #fff;
+  color: #eb4040;
+}
+.uk-heading-medium {
+  font-size: 2.8875rem;
+}
+.uk-button-secondary {
+  background-color: #004d74;
+  color: #fff;
+}
+.uk-text-danger {
+  color: #eb4040 !important;
+}
+.uk-button {
+  padding: 5px 35px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.uk-overlay-primary {
+  background: linear-gradient(75deg, rgb(0 160 196 / 83%) 0%, rgb(0 77 116 / 83%) 100%);
+}
+.uk-overlay-primary .uk-button-primary {
+  background-color: #eb4040;
+  color: #fff;
+  border: 2px solid #eb4040;
+}
+.uk-overlay-primary .uk-button-secondary {
+  color: #004d74;
+}
+
+.uk-card-title {
+  font-size: 1.7rem;
+}
+
+#ThreeGrid .uk-card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.uk-overlay-secondary {
+    background-color: rgb(235 64 64 / 82%);
+}
+.uk-overlay-secondary .uk-button-primary {
+  background-color: #00658b;
+  color: #fff;
+  border: 2px solid #00698e;
+}
+.uk-overlay-secondary .hor-div:before,
+.hor-div.hor-div-blue:before {
+  border-color: #00698e;
+}
+
+.uk-section-large {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.uk-margin-large-bottom {
+    margin-bottom: 70px!important;
+}
+
+.uk-heading-medium {
+  line-height: 1;
+}
+
+.fa-map-pin.fa-2xl {
+  font-size: 3rem;
+}
+
+.small-gaps.wp-container-6,
+.small-gaps.wp-container-9 {
+  gap: 1em!important;
+}
+
+.uk-navbar-container>.uk-container .uk-navbar-left {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* responsive */
+
+@media only screen and (min-width:960px) {
+  
+  .uk-margin-large-bottom {
+      margin-bottom: 40px!important;
+  }
+
+  .footer-main .uk-grid-divider>:not(.uk-first-column):before {
+    content: none;
+  }
+  
+  .uk-heading-medium {
+    font-size: 4.5rem;
+  }
+  
+  .uk-section-large {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+
+}

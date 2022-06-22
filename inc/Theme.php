@@ -53,6 +53,7 @@ class Theme extends Timber {
     add_action('init', array($this, 'register_widget_areas'));
     add_action('init', array($this, 'register_navigation_menus'));
     add_action('enqueue_block_assets', array($this, 'theme_enqueue_assets')); // use 'theme_enqueue_assets' for frontend-only
+    add_action('enqueue_block_assets', array($this, 'enqueue_google_fonts'));
     
     /**
     *
@@ -332,6 +333,9 @@ class Theme extends Timber {
     register_nav_menus(array(
       'main_menu' => _x( 'Main Menu', 'Menu locations', 'base-theme' ),
     ));
+  }
+  public function enqueue_google_fonts() {
+    wp_enqueue_style( 'rmcc-google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sarabun:wght@400;700;800&display=swap', array(), null );
   }
   public function theme_enqueue_assets() {
     

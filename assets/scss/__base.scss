@@ -19,15 +19,15 @@
 // A CUSTOM UIKIT BUILD WITH SELECTIVE COMPONENTS (ALL SELECTED)
 
 // 1. Import themed variables & mixins
-@import "assets/scss/lib/uikit/variables-theme.scss";
-@import "assets/scss/lib/uikit/mixins-theme.scss";
+// @import "assets/scss/lib/uikit/variables-theme.scss";
+// @import "assets/scss/lib/uikit/mixins-theme.scss";
 
 // 1. Or import the default variables & mixins
-// @import "assets/scss/lib/uikit/variables.scss";
-// @import "assets/scss/lib/uikit/mixins.scss";
+@import "assets/scss/lib/uikit/variables.scss";
+@import "assets/scss/lib/uikit/mixins.scss";
 
 // 2. If importing the theme, import themed uikit components (with custom variables) next
-@import "assets/scss/lib/uikit/theme/_import.scss";
+// @import "assets/scss/lib/uikit/theme/_import.scss";
 
 // 3. then, any custom variable overwrites. we can use this themed or not
 // $offcanvas-bar-background: #fff;

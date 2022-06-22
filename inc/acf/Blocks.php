@@ -14,6 +14,7 @@ class Blocks {
   public function __construct() {
     add_action('acf/init', array($this, 'register_blocks'));
     add_action('enqueue_block_assets', array($this, 'acf_blocks_editor_scripts')); // use 'enqueue_block_editor_assets' for backend-only
+    add_action('enqueue_block_assets', array($this, 'enqueue_google_fonts'));
   }
   
   /*
@@ -58,6 +59,9 @@ class Blocks {
     ));
       
   }
+  public function enqueue_google_fonts() {
+    wp_enqueue_style( 'rmcc-google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sarabun:wght@400;700;800&display=swap', array(), null );
+  }
   public function acf_blocks_editor_scripts() {
     
     // swiper
@@ -83,6 +87,10 @@ class Blocks {
       '',
       '',
       false
+    );
+    // theme stylesheet (theme)
+    wp_enqueue_style(
+      'base-theme-styles', get_stylesheet_uri()
     );
   
   }
