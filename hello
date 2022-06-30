@@ -1,0 +1,101 @@
+<!-- wp:acf/cover-section {"id":"block_62b23754c5851","name":"acf/cover-section","data":{"img":14,"_img":"field_61d76f01c14b7","bg_colour":"rgba(255,255,255,0.8)","_bg_colour":"field_626756573afe1","block_custom_classes":"uk-section-large","_block_custom_classes":"field_620e46bf11699"},"align":"full","mode":"preview","full_height":false} -->
+<!-- wp:group {"className":"uk-width-2-3@m"} -->
+<div class="wp-block-group uk-width-2-3@m"><!-- wp:paragraph {"className":"hor-div uk-text-small uk-margin-remove-bottom uk-text-uppercase uk-text-emphasis"} -->
+<p class="hor-div uk-text-small uk-margin-remove-bottom uk-text-uppercase uk-text-emphasis">dcapplianceservices</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1,"style":{"color":{"text":"#004d74"}},"className":"uk-text-bold uk-heading-medium uk-margin-remove-top uk-margin-remove-bottom"} -->
+<h1 class="uk-text-bold uk-heading-medium uk-margin-remove-top uk-margin-remove-bottom has-text-color" style="color:#004d74">Service &amp; Repairs of</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":1,"style":{"color":{"text":"#eb4040"}},"className":"uk-text-bold uk-heading-medium uk-margin-remove-top"} -->
+<h1 class="uk-text-bold uk-heading-medium uk-margin-remove-top has-text-color" style="color:#eb4040">Domestic &amp; Commercial Appliances</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left","className":"uk-text-lead"} -->
+<p class="has-text-align-left uk-text-lead">At DC Appliances Service &amp; Repairs, we specialize in Dishwashers, Fridges &amp; Freezers; Ovens, Washing Machines, Air Conditioning, Cold &amp; Freezer Rooms You can be confident that you will receive high quality repairs at a fair price.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"},"typography":{"fontSize":"16px"},"color":{"background":"#eb4040"}},"className":"uk-text-bold uk-text-decoration-none"} -->
+<div class="wp-block-button has-custom-font-size uk-text-bold uk-text-decoration-none" style="font-size:16px"><a class="wp-block-button__link has-background" style="border-radius:0px;background-color:#eb4040" rel="#">Primary</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"style":{"border":{"radius":"0px"},"color":{"background":"#004d74"},"typography":{"fontSize":"16px"}},"className":"uk-text-bold uk-text-decoration-none"} -->
+<div class="wp-block-button has-custom-font-size uk-text-bold uk-text-decoration-none" style="font-size:16px"><a class="wp-block-button__link has-background" style="border-radius:0px;background-color:#004d74" rel="#">Secondary</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:spacer {"height":"40px"} -->
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer --></div>
+<!-- /wp:group -->
+<!-- /wp:acf/cover-section -->
+
+<!-- wp:columns {"verticalAlignment":"center","className":"small-gaps pull-up-60"} -->
+<div class="wp-block-columns are-vertically-aligned-center small-gaps pull-up-60"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:acf/cover-section {"id":"block_62b24d8367dc0","name":"acf/cover-section","data":{"img":15,"_img":"field_61d76f01c14b7","bg_colour":"rgba(30,115,190,0.79)","_bg_colour":"field_626756573afe1","block_custom_classes":"uk-padding uk-light","_block_custom_classes":"field_620e46bf11699"},"align":"full","mode":"preview","full_height":false} -->
+<!-- wp:paragraph {"className":"hor-div uk-text-small uk-margin-remove-bottom uk-text-emphasis"} -->
+<p class="hor-div uk-text-small uk-margin-remove-bottom uk-text-emphasis">DCAPPLIANCESERVICES</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textColor":"white","className":"uk-margin-remove-top"} -->
+<h2 class="uk-margin-remove-top has-white-color has-text-color">Service &amp; Repairs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Avantage Group is all about strategy, we’re here to inform which tactics need funding and which are drains on resources.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"typography":{"fontSize":"15px"},"border":{"radius":"0px"},"color":{"background":"#eb4040"}},"className":"uk-text-bold uk-text-decoration-none"} -->
+<div class="wp-block-button has-custom-font-size uk-text-bold uk-text-decoration-none" style="font-size:15px"><a class="wp-block-button__link has-background" style="border-radius:0px;background-color:#eb4040">Read more</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+<!-- /wp:acf/cover-section --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:acf/cover-section {"id":"block_62b24db267dc2","name":"acf/cover-section","data":{"img":15,"_img":"field_61d76f01c14b7","bg_colour":"rgba(226,226,226,0.9)","_bg_colour":"field_626756573afe1","block_custom_classes":"uk-padding uk-dark","_block_custom_classes":"field_620e46bf11699"},"align":"full","mode":"preview","full_height":false} -->
+<!-- wp:paragraph {"className":"hor-div uk-text-small uk-margin-remove-bottom uk-text-emphasis"} -->
+<p class="hor-div uk-text-small uk-margin-remove-bottom uk-text-emphasis">DCAPPLIANCESERVICES</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"style":{"color":{"text":"#004d74"}},"className":"uk-margin-remove-top"} -->
+<h2 class="uk-margin-remove-top has-text-color" style="color:#004d74">Commercial</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Avantage Group is all about strategy, we’re here to inform which tactics need funding and which are drains on resources.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"},"typography":{"fontSize":"15px"},"color":{"background":"#eb4040"}},"className":"uk-text-bold uk-text-decoration-none"} -->
+<div class="wp-block-button has-custom-font-size uk-text-bold uk-text-decoration-none" style="font-size:15px"><a class="wp-block-button__link has-background" style="border-radius:0px;background-color:#eb4040">Read more</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+<!-- /wp:acf/cover-section --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:acf/cover-section {"id":"block_62b24d9d67dc1","name":"acf/cover-section","data":{"img":14,"_img":"field_61d76f01c14b7","bg_colour":"rgba(221,51,51,0.8)","_bg_colour":"field_626756573afe1","block_custom_classes":"uk-padding uk-light","_block_custom_classes":"field_620e46bf11699"},"align":"full","mode":"preview","full_height":false} -->
+<!-- wp:paragraph {"className":"hor-div hor-div-blue uk-text-small uk-margin-remove-bottom uk-text-emphasis"} -->
+<p class="hor-div hor-div-blue uk-text-small uk-margin-remove-bottom uk-text-emphasis">DCAPPLIANCESERVICES</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textColor":"white","className":"uk-margin-remove-top"} -->
+<h2 class="uk-margin-remove-top has-white-color has-text-color">Domestic</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Avantage Group is all about strategy, we’re here to inform which tactics need funding and which are drains on resources.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"},"typography":{"fontSize":"15px"},"color":{"background":"#004d74"}},"className":"uk-text-bold uk-text-decoration-none"} -->
+<div class="wp-block-button has-custom-font-size uk-text-bold uk-text-decoration-none" style="font-size:15px"><a class="wp-block-button__link has-background" style="border-radius:0px;background-color:#004d74">Read more</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+<!-- /wp:acf/cover-section --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->

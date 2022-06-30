@@ -1,80 +1,134 @@
 {% import "_snippets.twig" as snippets %}
 
-{# rmcc-block styles 
-
-  Extend this downstream to add inline styles for specific blocks
-
-#}
-
 {% block block_styles %}
+  {# Extend this downstream to add inline styles for specific blocks #}
 {% endblock %}
 
-{# rmcc-block settings 
+{# here we will set some variables according to the following block settings: 
 
-  Setting variables relating to the block settings. These settings are within the 
-  block-editing dialog/popup box. So all subsequent blocks can make use of these 
-  settings where necessary
+  block.align
+  block.align_text
+  block.align_content 
+  block.full_height
+
+  All these settings are within the block-editing dialog/popup box
 
 #}
 
-{# we should only do the block.align stuff when not in preview-mode as the editor has its own containers #}
+{# block.align should only be used when not in preview-mode as the editor has its own containers 
+  
+   with block.align, we will set 3 classes: align_break(when to break the container), align_container(what container to use) & align_style(left/right inline style attrs).
+  
+   align_container: 
+   align_break: 
+   align_style: 
+   
+#}
 {% if block.align and not is_preview %}
-  {% set align_container = (block.align == 'left' or block.align == 'center' or block.align == 'right') ? 'uk-container uk-container-small' : ((block.align == 'full') ? 'uk-container uk-container-expand uk-padding-remove-horizontal' : ((block.align == 'wide') ? 'uk-container uk-container-xlarge' : '')) %}
-  {% set align_break = (block.align == 'wide' or block.align == 'full') ? 'uk-container-break' : '' %}
-  {% set align_style = (block.align == 'right') ? 'style="padding-right:0;margin-right:0;"' : ((block.align == 'left') ? 'style="padding-left:0;margin-left:0;"' : '') %}
+  {# align_break #}
+  {% set align_break = (block.align == 'wide' or block.align == 'full') ? 'uk-container-break' %}
+  {# align_container #}
+  {% if (block.align == 'left' or block.align == 'center' or block.align == 'right') %}
+    {% set align_container = 'uk-container uk-container-small' %}
+  {% elseif (block.align == 'full') %}
+    {% set align_container = 'uk-container uk-container-expand uk-padding-remove-horizontal' %}
+  {% elseif (block.align == 'wide') %}
+    {% set align_container = 'uk-container uk-container-xlarge' %}
+  {% endif %}
+  {# align_style #}
+  {% if (block.align == 'right') %}
+    {% set align_style = 'style="padding-right:0;margin-right:0;"' %}
+  {% elseif (block.align == 'left') %}
+    {% set align_style = 'style="padding-left:0;margin-left:0;"' %}
+  {% endif %}
 {% endif %}
 
-{# can be 'left', 'center' or 'right', so best use is with uk-text/uk-flex #}
+{# align_text can be 'left', 'center' or 'right' 
+
+   best use would be with uk-text/uk-flex.
+   
+#}
 {% set align_text = block.align_text %}
 
-{# align_content can be false, default or 'matrix'. when matrix, we use align_content_pos to set uk-position classes #}
+{# align_content can be false, default or 'matrix' 
+
+   for non-matrix (default) we set align_content, can be top, center & bottom.
+   for matrix, we set align_content_pos with uk-position.
+   
+#}
 {% if block.align_content %}
-  {% set align_content = (block.align_content == 'center') ? 'middle' : block.align_content  %} {# non-matrix #}
-  
-  {% set align_content_pos = (block.align_content == 'top right') ? 'uk-position-top-right' : ((block.align_content == 'top center') ? 'uk-position-top-center' : ((block.align_content == 'top left') ? 'uk-position-top-left' : '')) %} {# matrix: top #}
-  
-  {% set align_content_pos = (block.align_content == 'center right') ? 'uk-position-center-right' : ((block.align_content == 'center center') ? 'uk-position-center' : ((block.align_content == 'center left') ? 'uk-position-center-left' : align_content_pos)) %} {# matrix: center #}
-  
-  {% set align_content_pos = (block.align_content == 'bottom right') ? 'uk-position-bottom-right' : ((block.align_content == 'bottom center') ? 'uk-position-bottom-center' : ((block.align_content == 'bottom left') ? 'uk-position-bottom-left' : align_content_pos)) %} {# matrix: bottom #}
+  {# non-matrix #}
+  {% set _align_content = (block.align_content == 'center') ? 'middle' : block.align_content  %}
+  {% set align_content = (block.align_content == 'center' or block.align_content == 'top' or block.align_content == 'bottom') ? 'uk-flex uk-flex-' ~ _align_content %}
+  {# matrix: top #}
+  {% if (block.align_content == 'top right') %}
+    {% set align_content_pos = 'uk-position-top-right' %}
+  {% elseif (block.align_content == 'top center') %}
+    {% set align_content_pos = 'uk-position-top-center' %}
+  {% elseif (block.align_content == 'top left') %}
+    {% set align_content_pos = 'uk-position-top-left' %}
+  {% endif %}
+  {# matrix: center #}
+  {% if (block.align_content == 'center right') %}
+    {% set align_content_pos = 'uk-position-center-right' %}
+  {% elseif (block.align_content == 'center center') %}
+    {% set align_content_pos = 'uk-position-center' %}
+  {% elseif (block.align_content == 'center left') %}
+    {% set align_content_pos = 'uk-position-center-left' %}
+  {% endif %}
+  {# matrix: bottom #}
+  {% if (block.align_content == 'bottom right') %}
+    {% set align_content_pos = 'uk-position-bottom-right' %}
+  {% elseif (block.align_content == 'bottom center') %}
+    {% set align_content_pos = 'uk-position-bottom-center' %}
+  {% elseif (block.align_content == 'bottom left') %}
+    {% set align_content_pos = 'uk-position-bottom-left' %}
+  {% endif %}
 {% endif %}
 
 {# block.full_height is boolean #}
 {% set fullheight = block.full_height %}
+{% set fullheight_class = (fullheight) ? 'uk-height-viewport' %}
 {% set fullheight_img_class = fullheight ? 'cover-img home-cover-img' : 'cover-img' %}
 
-{# rmcc-block custom fields (common) 
+{# next we will set variables according to common acf fields that might be added to blocks 
 
-  These variables are for common custom fields that may be applied to blocks. 
+  there will be 2 main types: fields that deal with block content, & fields that deal with a block's layout or design
+  it is good to try to keep these simple & to pair them with uikit classes wherever possible.
+  
   These variables may be modified, or new variables relating to new ACF fields 
   may be decalred downstream, but don't forget put them inside the containing Twig
-  block e.g: block_content
+  block e.g: block_content, as these variables will all be used downstream & not in this template
 
 #}
 
-{% set custom_classes = fields.block_custom_classes %}
+{# content fields: text, textarea, url, image or gallery #}
 {% set heading = fields.heading %}
 {% set message = fields.msg %}
-{% set button_text = fields.btn_txt %}
-{% set button_url = fields.btn_url %}
-{% set button_classes = fields.btn_classes %}
-{% set gallery = fields.gallery %}
-{% set first_class = (fields.layout == 'right') ? 'uk-flex-first' %}
 {% set bottom_msg = fields.bottom_msg %}
 {% set top_msg = fields.top_msg %}
-{% set bg_colour = fields.bg_colour %}
+{% set button_text = fields.btn_txt %}
+{% set button_url = fields.btn_url %}
 {% set embed_url = fields.embed_url  %}
-{% set _block_img = (fields.img) ? Image(fields.img) : null %}
-{% set light_class = (fields.light_mode == 'enabled') ? 'uk-light' : 'uk-dark' %}
-{% set overlay = (fields.overlay == 'dark') ? 'uk-overlay uk-overlay-primary' : 'uk-overlay uk-overlay-default' %}
+{% set block_img = (fields.img) ? Image(fields.img) : null %}
+{% set gallery = fields.gallery %}
 
-{# rmcc-block wrapper 
+{# layout/design: fields for adding css classes #}
+{% set custom_classes = fields.block_custom_classes %}
+{% set button_classes = fields.btn_classes %}
+{% set flex_first_class = (fields.layout == 'right') ? 'uk-flex-first' %}
 
-  A wrapper for the block, so we add some variables & apply some block settings 
-  to the particular block, specifically the 'align' setting with uikit container 
-  logic
+{# layout/design: fields for changing design colour #}
+{% set bg_colour = fields.bg_colour %}
+{% set light_mode_class = (fields.light_mode == 'enabled') ? 'uk-light' : 'uk-dark' %}
+{% set overlay_class = (fields.overlay == 'dark') ? 'uk-overlay uk-overlay-primary' : 'uk-overlay uk-overlay-default' %}
+
+{# here we do the HTML markup for block wrapper 
+
+  Variables above related to block settings are added to the wrapper markup here. 
+  the actual Blocks themeselves will extend block_content from this template
 
 #}
-
 <div class="{{ align_break }} rmcc-block">
   <div id="{{ block.id|e('esc_html') }}" class="{{ align_container }} {{ block.className|e('esc_html') }}" {{ align_style }}>
     {% block block_content %}
@@ -83,11 +137,6 @@
   </div>
 </div>
 
-{# rmcc-block scripts 
-
-  Extend this downstream to add inline scripts for specific blocks
-
-#}
-
 {% block block_scripts %}
+  {# Extend this downstream to add inline scripts for specific blocks #}
 {% endblock %}

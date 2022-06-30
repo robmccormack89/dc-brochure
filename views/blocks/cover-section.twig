@@ -9,29 +9,21 @@
 {% extends "_block.twig" %}
 
 {% block block_content %}
-
   {# image logic #}
-  {% set img_src = _block_img.src|resize(1920, (fullheight) ? '975' : null)|e('esc_url') %}
-  {% set the_bg_img = (img_src) ? 'style="background-image: url( ' ~ img_src ~ ' );"' %}
+  {% set _block_img = block_img.src|resize(1920, (fullheight) ? 975 : null) %}
+  {% set bg_img_style_attrs = (block_img) ? 'style="background-image: url( ' ~ _block_img|e('esc_url') ~ ' );"' %}
   
   {# styles logic #}
-  {% set fullheight_classes = (fullheight) ? 'uk-flex uk-flex-middle uk-height-viewport' %}
-  {% set the_bg_colour = (bg_colour) ? 'style="background-color: ' ~ bg_colour|e('esc_html') ~ ';"' %}
+  {% set bg_colour_style_attrs = (bg_colour) ? 'style="background-color: ' ~ bg_colour|e('esc_html') ~ ';"' %}
   
   {# block html #}
-  <div class="uk-background-cover" {{ the_bg_img }}>
-    <div class="uk-padding-remove uk-position-relative" {{ the_bg_colour }}>
-      <div class="uk-container uk-section {{ custom_classes|e('esc_html') }} {{ fullheight_classes }}">
-        <div class="cover-block-content uk-width-1-1">
+  <div class="uk-background-cover" {{ bg_img_style_attrs }}>
+    <div class="uk-position-relative" {{ bg_colour_style_attrs }}>
+      <div class="uk-container uk-section uk-section-small {{ custom_classes|e('esc_html') }} {{ fullheight_class }}">
+        <div class="cover-block-content">
           <InnerBlocks />
         </div>
       </div>
-      <!-- <div class="uk-position-bottom">
-        <div class="uk-container">
-          <p class="uk-text-center uk-margin-remove">bottom_msg</p>
-        </div>
-      </div> -->
     </div>
   </div>
-  
 {% endblock %}

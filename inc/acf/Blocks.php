@@ -47,6 +47,7 @@ class Blocks {
       // the defaults for various block settings
       'align' => 'full',
       'full_height' => false,
+      // 'align_content' => '',
       'mode' => 'preview',
     
       // category & icon
