@@ -185,7 +185,8 @@
 .padding-5 {
   padding: 5px;
 }
-a.dont-underline:hover, a.dont-underline:focus {
+a.dont-underline:hover, a.dont-underline:focus,
+.dont-underline a:hover, .dont-underline a:focus {
   text-decoration: none;
 }
 // backgrounds

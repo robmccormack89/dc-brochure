@@ -112,6 +112,21 @@ class Theme extends Timber {
     */
     add_action('pre_get_posts', array($this, 'remove_stickies_from_main_loop'));
     
+    // custom taxonomy base
+    add_filter( 'post_type_link', array($this, 'add_tax_base_to_service_permalinks'), 1, 3 );
+    
+  }
+  
+  // custom taxonomy base
+  public function add_tax_base_to_service_permalinks($post_link, $id = 0){
+    $post = get_post($id);  
+    if (is_object($post)){
+      $terms = wp_get_object_terms($post->ID, 'service-type');
+      if( $terms ){
+        return str_replace('%service-type%' , $terms[0]->slug , $post_link);
+      }
+    }
+    return $post_link;  
   }
   
   /**
@@ -312,9 +327,25 @@ class Theme extends Timber {
       $context['theme']->logo->h = $this->logo_height;
     }
     
-    // menu register & args
-    $context['menu_main'] = new \Timber\Menu('main_menu', array('depth' => 3));
-    $context['has_menu_main'] = has_nav_menu('main_menu');
+    // add menus with args
+    $context['main_menu'] = new \Timber\Menu('main_menu', array('depth' => 3));
+    $context['has_main_menu'] = has_nav_menu('main_menu');
+    
+    $context['mobile_menu'] = new \Timber\Menu('mobile_menu', array('depth' => 3));
+    $context['has_mobile_menu'] = has_nav_menu('mobile_menu');
+    
+    $context['secondary_menu'] = new \Timber\Menu('secondary_menu', array('depth' => 1));
+    $context['has_secondary_menu'] = has_nav_menu('secondary_menu');
+    
+    $context['contact_menu'] = new \Timber\Menu('contact_menu', array('depth' => 1));
+    $context['has_contact_menu'] = has_nav_menu('contact_menu');
+    
+    $context['coverage_areas'] = new \Timber\Menu('coverage_areas', array('depth' => 1));
+    $context['has_coverage_areas'] = has_nav_menu('coverage_areas');
+    
+    // add sidebars
+    $context['sidebar_footer_left'] = Timber::get_widgets('sidebar-footer-left');
+    $context['sidebar_footer_right'] = Timber::get_widgets('sidebar-footer-right');
     
     // return context
     return $context;    
@@ -322,16 +353,123 @@ class Theme extends Timber {
   }
   public function register_post_types() {
     
+    $labels = array(
+      'name'                  => _x( 'Services', 'Post Type General Name', 'text_domain' ),
+      'singular_name'         => _x( 'Service', 'Post Type Singular Name', 'text_domain' ),
+      'menu_name'             => __( 'Services', 'text_domain' ),
+      'name_admin_bar'        => __( 'Service', 'text_domain' ),
+      'archives'              => __( 'Services', 'text_domain' ),
+      'attributes'            => __( 'Item Attributes', 'text_domain' ),
+      'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+      'all_items'             => __( 'All Items', 'text_domain' ),
+      'add_new_item'          => __( 'Add New Item', 'text_domain' ),
+      'add_new'               => __( 'Add New', 'text_domain' ),
+      'new_item'              => __( 'New Item', 'text_domain' ),
+      'edit_item'             => __( 'Edit Item', 'text_domain' ),
+      'update_item'           => __( 'Update Item', 'text_domain' ),
+      'view_item'             => __( 'View Item', 'text_domain' ),
+      'view_items'            => __( 'View Items', 'text_domain' ),
+      'search_items'          => __( 'Search Item', 'text_domain' ),
+      'not_found'             => __( 'Not found', 'text_domain' ),
+      'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+      'featured_image'        => __( 'Featured Image', 'text_domain' ),
+      'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+      'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+      'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+      'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+      'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+      'items_list'            => __( 'Items list', 'text_domain' ),
+      'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+      'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+    );
+    $args = array(
+      'label'                 => __( 'Service', 'text_domain' ),
+      'description'           => __( 'The Services we offer', 'text_domain' ),
+      'labels'                => $labels,
+      'show_in_rest'          => true,
+      'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes'),
+      'hierarchical'          => false,
+      'rewrite'               => array('slug' => 'services-repairs/%service-type%'),
+      'public'                => true,
+      'show_ui'               => true,
+      'show_in_menu'          => true,
+      'menu_position'         => 5,
+      'show_in_admin_bar'     => true,
+      'show_in_nav_menus'     => true,
+      'can_export'            => true,
+      'exclude_from_search'   => false,
+      'publicly_queryable'    => true,
+      'has_archive'           => 'services-repairs',
+      'capability_type'       => 'page',
+    );
+    register_post_type( 'services-repairs', $args );     
+    
   }
   public function register_taxonomies() {
     
+    $labels = array(
+      'name'                       => _x( 'Service Type', 'Taxonomy General Name', 'text_domain' ),
+      'singular_name'              => _x( 'Service Type', 'Taxonomy Singular Name', 'text_domain' ),
+      'menu_name'                  => __( 'Service Types', 'text_domain' ),
+      'all_items'                  => __( 'All Items', 'text_domain' ),
+      'parent_item'                => __( 'Parent Item', 'text_domain' ),
+      'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
+      'new_item_name'              => __( 'New Item Name', 'text_domain' ),
+      'add_new_item'               => __( 'Add New Item', 'text_domain' ),
+      'edit_item'                  => __( 'Edit Item', 'text_domain' ),
+      'update_item'                => __( 'Update Item', 'text_domain' ),
+      'view_item'                  => __( 'View Item', 'text_domain' ),
+      'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+      'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
+      'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+      'popular_items'              => __( 'Popular Items', 'text_domain' ),
+      'search_items'               => __( 'Search Items', 'text_domain' ),
+      'not_found'                  => __( 'Not Found', 'text_domain' ),
+      'no_terms'                   => __( 'No items', 'text_domain' ),
+      'items_list'                 => __( 'Items list', 'text_domain' ),
+      'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+    );
+    $args = array(
+      'labels'                     => $labels,
+      'hierarchical'               => true,
+      'public'                     => true,
+      'show_ui'                    => true,
+      'show_admin_column'          => true,
+      'show_in_nav_menus'          => true,
+      'show_tagcloud'              => false,
+    );
+    register_taxonomy( 'service-type', array( 'services-repairs'), $args );
+    
   }
   public function register_widget_areas() {
+    
+    register_sidebar(array(
+        'name' => esc_html__('Footer Widget Area: Left', 'base-theme'),
+        'id' => 'sidebar-footer-left',
+        'description' => esc_html__('Footer Widget Area: Left; works best with the current widget only.', 'base-theme'),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h4 class="widget-title uk-h4 uk-text-bold uk-text-primary uk-margin-remove-top">',
+        'after_title' => '</h4>'
+    ));
+    register_sidebar(array(
+        'name' => esc_html__('Footer Widget Area: Right', 'base-theme'),
+        'id' => 'sidebar-footer-right',
+        'description' => esc_html__('Footer Widget Area: Right; works best with the current widget only.', 'base-theme'),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h4 class="widget-title uk-h4 uk-text-bold uk-text-primary uk-margin-remove-top">',
+        'after_title' => '</h4>'
+    ));
     
   }
   public function register_navigation_menus() {
     register_nav_menus(array(
       'main_menu' => _x( 'Main Menu', 'Menu locations', 'base-theme' ),
+      'secondary_menu' => _x( 'Secondary Menu', 'Menu locations', 'base-theme' ),
+      'contact_menu' => _x( 'Contact Menu', 'Menu locations', 'base-theme' ),
+      'mobile_menu' => _x( 'Mobile Menu', 'Menu locations', 'base-theme' ),
+      'coverage_areas' => _x( 'Coverage Areas', 'Menu locations', 'base-theme' ),
     ));
   }
   public function enqueue_google_fonts() {

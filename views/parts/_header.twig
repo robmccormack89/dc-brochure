@@ -1,64 +1,124 @@
-<header class="site-header">
-  <nav class="uk-navbar-container">
-    <div class="uk-container" uk-navbar>
-      
-      {# logo/site_title #}
-      <div class="uk-navbar-left">
-        <a class="uk-navbar-item uk-logo uk-text-bold pull-left-15" href="{{ site.link|e('esc_url') }}">
-          {% if theme.logo %}
-            <img src="{{ theme.logo.src|e('esc_url') }}" width="{{ theme.logo.w }}" height="{{ theme.logo.h }}" alt="{{ theme.logo.alt|e('esc_html') }}">
-          {% else %}
-            {{ site.title|e('esc_html') }}
-          {% endif %}
-        </a>
-    	</div>
-      
-      {# main menu/s #}
-      {% if has_menu_main %}
-        <div class="uk-navbar-right">
-          <ul class="uk-navbar-nav uk-visible@m pull-right-15">
-            {% for item in menu_main.get_items %}
-              {% if item.get_children %}
-                <li class="{{ item.classes|join(' ')|e('esc_html') }}">
-                  <a href="{{ item.get_link|e('esc_url') }}">{{ item.title|e('esc_html') }}</a>
-                  <div uk-dropdown>
-                    <ul class="uk-nav uk-dropdown-nav">
-                      {% for child in item.get_children %}
-                        <li class="{{ child.classes|join(' ')|e('esc_html') }}">
-                          <a href="{{ child.get_link|e('esc_url') }}">{{ child.title|e('esc_html') }}</a>
-                          {% if child.children %}
-                            <div uk-dropdown="pos: right-top">
-                              <ul class="uk-nav uk-dropdown-nav">
-                                {% for third in child.children %}
-                                  <li class="{{ third.classes|join(' ')|e('esc_html') }}">
-                                    <a href="{{ third.get_link|e('esc_url') }}">{{ third.title|e('esc_html') }}</a>
-                                  </li>
-                                {% endfor %}
-                              </ul>
-                            </div>
-                          {% endif %}
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  </div>
-                </li>
+{% import "_snippets.twig" as snippets %}
+
+<header>
+
+  <div class="header-top uk-background-secondary uk-light uk-visible@m">
+    <div class="uk-container">
+      <nav class="header-top-navbar">
+        <ul class="uk-flex uk-flex-between" uk-grid>
+          <li class="uk-width-auto">{{ snippets.header_top_left() }}</li>
+          <li class="uk-width-auto">
+            <ul class="uk-subnav uk-subnav-divider uk-flex uk-flex-center uk-flex-right@m">
+              {% if has_secondary_menu %}
+                {% for item in secondary_menu.get_items %}
+                  <li class="{{ item.classes|join(' ')|e('esc_html') }}">
+                    <a href="{{ item.link|e('esc_url') }}">{{ item.title|e('esc_html') }}</a>
+                  </li>
+                {% endfor %}
               {% else %}
-                <li class="{{ item.classes|join(' ')|e('esc_html') }}">
-                  <a href="{{ item.link|e('esc_url') }}">{{ item.title|e('esc_html') }}</a>
+                <li class="uk-active">
+                  <a href="#">Home</a>
+                </li>
+                <li class="">
+                  <a href="#">About</a>
+                </li>
+                <li class="">
+                  <a href="#">Blog</a>
                 </li>
               {% endif %}
-            {% endfor %}
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+  <nav class="header-bottom uk-navbar-container uk-navbar-transparent uk-background-default">
+    <div class="uk-container">
+      <div uk-navbar>
+    
+        {# LOGO #}
+        <div class="uk-navbar-left">
+          <a class="uk-logo uk-margin-small-top uk-margin-small-bottom" href="{{ site.link|e('esc_url') }}">
+            {% if theme.logo %}
+              <img src="{{ theme.logo.src|e('esc_url') }}" width="{{ theme.logo.w }}" height="{{ theme.logo.h }}" alt="{{ theme.logo.alt|e('esc_html') }}">
+            {% else %}
+              <img src="https://dcapplianceservices.ie/wp-content/uploads/2020/08/dc-logo-final.png" width="260" alt="">
+            {% endif %}
+          </a>
+        </div>
+        
+        {# MAIN MENU #}
+        <div class="uk-navbar-right">
+          
+          {# main menu #}
+          {% if has_main_menu %}
+            <ul class="uk-navbar-nav uk-visible@m">
+              {% for item in main_menu.get_items %}
+                {% if item.get_children %}
+                  <li class="{{ item.classes|join(' ')|e('esc_html') }}">
+                    <a href="{{ item.get_link|e('esc_url') }}">{{ item.title|e('esc_html') }}</a>
+                    <div uk-dropdown>
+                      <ul class="uk-nav uk-dropdown-nav">
+                        {% for child in item.get_children %}
+                          <li class="{{ child.classes|join(' ')|e('esc_html') }}">
+                            <a href="{{ child.get_link|e('esc_url') }}">{{ child.title|e('esc_html') }}</a>
+                            {% if child.children %}
+                              <div uk-dropdown="pos: right-top">
+                                <ul class="uk-nav uk-dropdown-nav">
+                                  {% for third in child.children %}
+                                    <li class="{{ third.classes|join(' ')|e('esc_html') }}">
+                                      <a href="{{ third.get_link|e('esc_url') }}">{{ third.title|e('esc_html') }}</a>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                              </div>
+                            {% endif %}
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </li>
+                {% else %}
+                  <li class="{{ item.classes|join(' ')|e('esc_html') }}">
+                    <a href="{{ item.link|e('esc_url') }}">{{ item.title|e('esc_html') }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+          
+          {% if not has_mobile_menu %}
+            <a class="uk-navbar-toggle uk-icon uk-navbar-toggle-icon uk-hidden@m" uk-navbar-toggle-icon uk-toggle="target: #SlideInMenu"></a>
+          {% endif %}
+          
+          {# search #}
+          <ul class="uk-navbar-item uk-visible@m" hidden>
+            <a class="uk-text-emphasis" href="#"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
           </ul>
-          <a class="uk-navbar-toggle uk-icon uk-navbar-toggle-icon pull-right-15 uk-hidden@m" uk-navbar-toggle-icon uk-toggle="target: #SlideInMenu"></a>
-      	</div>
-      {% endif %}
-      
+          
+          {% if has_contact_menu %}
+            <div class="uk-navbar-item uk-visible@m">
+              {% for item in contact_menu.get_items %}
+                <a class="uk-button uk-button-primary uk-button-small uk-text-bold" href="{{ item.link|e('esc_url') }}">{{ item.title|e('esc_html') }}</a>
+              {% endfor %}
+            </div>
+          {% else %}
+            <div class="uk-navbar-item uk-visible@m">
+              <a class="uk-button uk-button-primary uk-button-small uk-text-bold" href="#">Contact</a>
+            </div>
+          {% endif %}
+          
+        </div>
+    
+      </div>
     </div>
   </nav>
+  
 </header>
 
 {# mobile menu offcanvas #}
-{% if has_menu_main %}
+{% if not has_mobile_menu %}
   <nav id="SlideInMenu" class="mobile-slide-navbar" uk-offcanvas="mode: push; overlay: true">
     <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide uk-padding-small">
       
@@ -69,13 +129,13 @@
         
         {# mobile menu header #}
         <li class="uk-nav-header uk-padding-remove uk-margin-small-bottom">
-          {{ menu_main.title|e('esc_html') }}
+          {{ mobile_menu.title|e('esc_html')|default(site.title|e('esc_html')) }}
         </li>
         
         <li class="uk-nav-divider"></li>
         
         {# mobile menu #}
-        {% for item in menu_main.get_items %}
+        {% for item in mobile_menu.get_items %}
           {% if item.get_children %}
             <li class="{{ item.classes|join(' ')|e('esc_html') }} uk-parent">
               <a href="{{ item.link|e('esc_url') }}">{{ item.title|e('esc_html')}}</a>
@@ -102,6 +162,18 @@
             </li>
           {% endif %}
         {% endfor %}
+        
+        {% if has_contact_menu %}
+          <li>
+            {% for item in contact_menu.get_items %}
+              <a class="{{ item.classes|join(' ')|e('esc_html') }}" href="{{ item.link|e('esc_url') }}">{{ item.title|e('esc_html') }}</a>
+            {% endfor %}
+          </li>
+        {% else %}
+          <li>
+            <a class="" href="#">Contact</a>
+          </li>
+        {% endif %}
         
       </ul>
       

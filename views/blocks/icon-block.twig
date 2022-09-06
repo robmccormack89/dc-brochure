@@ -1,0 +1,26 @@
+{#
+/**
+ * Block Name: Icon Block
+ *
+ * This is the template that displays the Icon Block.
+ */
+#}
+
+{% extends "_block.twig" %}
+
+{% block block_content %}
+  {% set icon_classes = (align_text == 'center') ? 'uk-width-1-1' : 'uk-width-auto' %}
+  {% set content_classes = (align_text == 'center') ? 'uk-width-1-1 uk-margin-small' : 'uk-width-expand' %}
+  {% set flex_class = (align_text == 'right') ? 'uk-flex-first' : 'not-first' %}
+  
+  <div class="{{ align_content }} uk-flex-{{ align_text }} uk-text-{{ align_text }}" uk-grid>
+    <div class="{{ icon_classes }}">
+      {{ icon_html|e('wp_kses_post') }}
+    </div>
+    <div class="{{ content_classes }} {{ flex_class }}">
+      <div class="icon-block-content">
+        <InnerBlocks />
+      </div>
+    </div>
+  </div>
+{% endblock %}

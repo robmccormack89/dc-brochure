@@ -3,6 +3,19 @@
 #}
 
 {% macro nothing_here() %}{{ _x('Sorry, nothing to display here...', 'Base', 'base-theme') }}{% endmacro %}
+{% macro all() %}{{ _x('All', 'Base', 'base-theme') }}{% endmacro %}
+
+{# Blocks
+
+#}
+
+{% macro swiper_script_text() %}{{ _x('Your swiper script has been placed here. This text is only visible in preview mode.', 'Swiper block', 'base-theme') }}{% endmacro %}
+
+{# header
+
+#}
+
+{% macro header_top_left() %}{{ _x('<i uk-icon="icon: location" class="uk-margin-small-right"></i>We provide Service & Repairs of Domestic appliances & cover all of Leinster', 'Header', 'base-theme') }}{% endmacro %}
 
 {# footer
 
@@ -10,7 +23,8 @@
 
 {% macro back_to_home() %}{{ _x('Back to Homepage', 'Footer', 'base-theme') }}{% endmacro %}
 {% macro go_to_top() %}{{ _x('Go to Top', 'Footer', 'base-theme') }}{% endmacro %}
-{% macro copyright() %}{{ _x('©', 'Footer', 'base-theme') }}{% endmacro %}
+{% macro _copyright() %}{{ _x('©', 'Footer', 'base-theme') }}{% endmacro %}
+{% macro copyright() %}{{ _x('© %s <span class="uk-text-bold uk-text-emphasis">%s</span>. All rights reserved.', 'Footer', 'base-theme') }}{% endmacro %}
 
 {# archive
 

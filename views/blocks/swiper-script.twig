@@ -1,0 +1,77 @@
+{#
+/**
+ * Block Name: Swiper Script
+ *
+ * This is the template that displays the Swiper Script block.
+ */
+#}
+
+{% extends "_block.twig" %}
+{% import "_snippets.twig" as snippets %}
+
+{% block block_content %}
+  {% if not is_preview %}
+    {% if fields.navigation %}
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    {% endif %}
+    {% if fields.pagination %}
+      <div class="swiper-pagination"></div>
+    {% endif %}
+    <script type='text/javascript'>
+      var {{ fields.key|e('esc_html') }} = new Swiper('{{ fields.target|e('esc_html') }}', {
+
+        {% if fields.slidesPerView is not empty %}
+          slidesPerView: {{ fields.slidesPerView }},
+        {% endif %}
+    
+        {% if fields.spaceBetween is not empty %}
+          spaceBetween: {{ fields.spaceBetween }},
+        {% endif %}
+        
+        {% if fields.centeredSlides %}
+          centeredSlides: true,
+        {% endif %}
+    
+        {% if fields.autoplay %}
+          autoplay: {
+            delay: {{ fields.autoplay_delay|default(3000) }},
+            disableOnInteraction: true,
+          },
+        {% else %}
+          autoplay: false,
+        {% endif %}
+    
+        {% if fields.navigation %}
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        {% endif %}
+    
+        {% if fields.pagination %}
+          pagination: {
+            
+            el: '.swiper-pagination',
+            
+            {% if fields.pagination_type %}
+              type: '{{ fields.type|e('esc_html') }}',
+            {% endif %}
+            
+            {% if fields.pagination_dynamicBullets %}
+              dynamicBullets: true,
+            {% endif %}
+            
+            {% if not is_preview %}
+              clickable: true,
+            {% endif %}
+            
+          },
+        {% endif %}
+          
+      });
+    </script>
+  {% else %}
+    {{ snippets.swiper_script_text()|e('esc_html') }}
+  {% endif %}
+{% endblock %}

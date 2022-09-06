@@ -1,0 +1,135 @@
+{#
+/**
+ * Block Name: Content Grid section
+ *
+ * This is the template that displays the Cover section block.
+ */
+#}
+
+{% extends "_block.twig" %}
+{% import "_snippets.twig" as snippets %}
+
+{% block block_content %}
+  {% if services is not empty %}
+  <style>
+    /* #ServicesGrid .service-item .uk-background-default .uk-text-primary {
+      color: #eb4040!important;
+      font-size: 1.6rem;
+    }
+    #ServicesGrid .service-item .uk-overlay {
+      background-color: rgba(1,66,140,0.82);
+      padding: 20px;
+    }
+    #ServicesGrid .service-item .uk-light .uk-button-primary {
+      background-color: #eb4040;
+      color: #fff;
+    }
+    @media only screen and (max-width:479px) {
+      #ServicesGrid .uk-transition-slide-bottom {
+        --uk-translate-y: 100%;
+        --uk-translate-y: none;
+        --uk-translate-x: none;
+        --uk-scale-x: none;
+        --uk-scale-y: none;
+        opacity: 1;
+        transform: none;
+        transition: none;
+        position: relative!important;
+      }
+    }
+    @media only screen and (min-width:480px) {
+      #ServicesGrid .uk-transition-slide-bottom {
+        --uk-translate-y: 32%;
+      }
+      #ServicesGrid .uk-transition-fade, #ServicesGrid [class*=uk-transition-scale], #ServicesGrid [class*=uk-transition-slide] {
+        opacity: 1;
+      }
+    }
+    #ServicesGrid a.uk-link-heading.uk-link-primary {
+      color: #eb4040;
+    }
+    #ServicesGrid .uk-grid-column-large>*, #ServicesGrid .uk-grid-large>* {
+      padding-left: 15px;
+    }
+    #ServicesGrid  .uk-grid+.uk-grid-large, #ServicesGrid .uk-grid-large>.uk-grid-margin {
+      margin-top: 15px;
+    }
+    #ServicesGrid .uk-grid-large {
+      margin-left: -15px;
+    }
+    #ServicesGrid .uk-transition-toggle:hover [class*=uk-transition-slide] {
+      --uk-translate-x: 0;
+      --uk-translate-y: 0;
+      opacity: 1;
+    } */
+    
+    .uk-button.uk-border-rounded {
+      border-radius: 100px;
+    }
+    .uk-subnav>*>:first-child {
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+  </style>
+  <section id="ServicesGrid" class="">
+    {% if service_types is not empty %}
+    <div class="" uk-filter="target: .js-filter">
+    {% endif %}
+      {% if service_types is not empty %}
+        <ul class="uk-subnav uk-subnav-pill">
+          <li class="uk-active" uk-filter-control>
+            <a href="#">{{ snippets.all()|e('esc_html') }}</a>
+          </li>
+          {% for term in service_types %}
+            <li uk-filter-control="filter: .category-{{ term.slug|e('esc_html') }}">
+              <a href="#">{{ term.name|e('esc_html') }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      <ul class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-grid-large" uk-grid="masonry:true;">
+        {% for post in services %}
+        
+          {% set post_types = fn('wp_get_post_terms', post.id, 'service-type', { 'fields': 'slugs' } ) %}
+          <!-- <li class="service-item category-{{ post_types|join(' ') }}" hidden>
+            <div class="uk-inline-clip uk-transitionnnnn-toggle uk-box-shadow-large" tabindex="0">
+              
+              {% if post.thumbnail.src %}
+                <a href="{{ post.link|e('esc_url') }}">
+                  <img class="uk-border-rounded" src="{{ post.thumbnail.src|resize(380)|e('esc_url') }}" width="380" height="456" alt="">
+                </a>
+              {% else %}
+                <a href="{{ post.link|e('esc_url') }}">
+                  <img class="uk-border-rounded" src="https://picsum.photos/380/360?random={{ loop.index }}" width="380" height="456" alt="">
+                </a>
+              {% endif %}
+              
+              <div class="uk-transitionnnnn-slide-bottom uk-positionnnnn-bottom uk-overlayyyyy uk-lighttttt">
+                <h4 class="uk-h4 uk-margin-remove uk-text-primary"><a class="uk-link-heading uk-link-primary" href="{{ post.link|e('esc_url') }}">{{ post.title|e('esc_html') }}</a></h4>
+                <p class="uk-visible@s">{{ post.preview.length(10).force.read_more('') }}</p>
+                <a href="{{ post.link|e('esc_url') }}" class="uk-button uk-button-primary uk-button-small uk-visible@s">{{ snippets.read_more()|e('esc_html') }}</a>
+              </div>
+              
+            </div>
+          </li> -->
+          
+          <li class="uk-text-center service-item category-{{ post_types|join(' ') }}">
+            {% if post.thumbnail.src %}
+              <img src="{{ post.thumbnail.src|resize(380)|e('esc_url') }}" alt="">
+            {% else %}
+              <img src="https://picsum.photos/380/360?random={{ loop.index }}" alt="">
+            {% endif %}
+            <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">{{ post.title|e('esc_html') }}</h4>
+            <a class="uk-button uk-button-primary uk-button-small uk-border-rounded" href="{{ post.link|e('esc_url') }}">{{ snippets.read_more()|e('esc_html') }}</a>
+          </li>
+          
+        {% endfor %}
+      </ul>
+    {% if service_types is not empty %}
+    </div>
+    {% endif %}
+  </section>
+  {% else %}
+    {{ snippets.nothing_here()|e('esc_html') }}
+  {% endif %}
+{% endblock %}

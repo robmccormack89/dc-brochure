@@ -1,25 +1,155 @@
 {% import "_snippets.twig" as snippets %}
 
-<footer class="site-footer">
-  <nav class="uk-navbar-container">
-    <div class="uk-container" uk-navbar>
-      
-      {# copyright #}
-      <div class="uk-navbar-left">
-        <div class="uk-navbar-item pull-left-15">
-          <p class="uk-margin-remove">
-            {{ snippets.copyright()|e('esc_html') }} {{ now|date('Y')|e('esc_html') }} <a href="{{ site.link|e('esc_url') }}" uk-tooltip="{{ snippets.back_to_home()|e('esc_html') }}">{{ site.title|e('esc_html') }}</a>
-          </p>
-        </div>
-    	</div>
-      
-      {# back to top #}
-      <div class="uk-navbar-right">
-        <div class="uk-navbar-item pull-right-15">
-          <a href="#" uk-totop uk-scroll uk-tooltip="{{ snippets.go_to_top()|e('esc_html') }}"></a>
-        </div>
-    	</div>
-      
+<footer>
+  
+  <div class="footer-main uk-background-secondary uk-light uk-section">
+    <div class="uk-container">
+      <ul class="uk-child-width-1-4@m uk-grid-divider" uk-grid>
+        <li>
+          <span class="hor-div uk-text-small uk-margin-remove-bottom uk-text-uppercase">{{ site.title|e('esc_html') }}</span>
+          {% if sidebar_footer_left %}
+            {{ sidebar_footer_left }}
+          {% else %}
+            <h3 class="uk-h4 uk-text-bold uk-text-primary uk-margin-remove-top uk-margin-small-bottom">About us</h3>
+            <p class="uk-text-small uk-margin-small-top">At DC Appliances Service & Repairs we specialize in Dishwashers, Fridges & Freezers; Ovens, Washing Machines & more. You can be confident that you will receive high quality repairs at a fair price.</p>
+            <ul class="uk-list uk-list-collapse uk-text-emphasis">
+              <li><i class="fa-solid fa-phone uk-margin-xsmall-right"></i> 086 227 7425</li>
+              <li><i class="fa-solid fa-envelope uk-margin-xsmall-right"></i> info@dcapplianceservices.ie</li>
+            </ul>
+          {% endif %}
+        </li>
+        <li class="uk-width-1-2@m">
+          <span class="hor-div uk-text-small uk-margin-remove-bottom uk-text-uppercase">{{ site.title|e('esc_html') }}</span>
+          {% if has_coverage_areas %}
+            <h3 class="uk-h4 uk-text-bold uk-text-primary uk-margin-remove-top">{{ coverage_areas.title|e('esc_html') }}</h3>
+            <ul class="uk-grid uk-text-small uk-grid-small uk-child-width-1-3@s uk-child-width-1-3@s uk-child-width-1-5@m" uk-grid="">
+              {% for item in coverage_areas.get_items %}
+                <li>
+                  <p>{{ item.title|e('esc_html') }}</p>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <h3 class="uk-h4 uk-text-bold uk-text-primary uk-margin-remove-top">Coverage areas</h3>
+            <div class="uk-grid uk-text-small uk-grid-small uk-child-width-1-3@s uk-child-width-1-3@s uk-child-width-1-5@m" uk-grid="">
+              <div>
+                <p>Mullingar</p>
+              </div>
+              <div>
+                <p>Athlone</p>
+              </div>
+              <div>
+                <p>Kinnegad</p>
+              </div>
+              <div>
+                <p>Tullamore</p>
+              </div>
+              <div>
+                <p>Tyrellspass</p>
+              </div>
+              <div>
+                <p>Moate</p>
+              </div>
+              <div>
+                <p>Kilbeggan</p>
+              </div>
+              <div>
+                <p>Leixlip</p>
+              </div>
+              <div>
+                <p>Maynooth</p>
+              </div>
+              <div>
+                <p>Navan</p>
+              </div>
+              <div>
+                <p>Kells</p>
+              </div>
+              <div>
+                <p>Mountmellick</p>
+              </div>
+              <div>
+                <p>Delvin</p>
+              </div>
+              <div>
+                <p>The Downs</p>
+              </div>
+              <div>
+                <p>Kildare</p>
+              </div>
+              <div>
+                <p>Newbridge</p>
+              </div>
+              <div>
+                <p>Lucan</p>
+              </div>
+              <div>
+                <p>Ballymore</p>
+              </div>
+              <div>
+                <p>Dunshaughlin</p>
+              </div>
+            </div>
+          {% endif %}
+        </li>
+        <li>
+          <span class="hor-div uk-text-small uk-margin-remove-bottom uk-text-uppercase">{{ site.title|e('esc_html') }}</span>
+          {% if sidebar_footer_right %}
+            {{ sidebar_footer_right }}
+          {% else %}
+            <h3 class="uk-h4 uk-text-bold uk-text-primary uk-margin-remove-top uk-margin-small-bottom">Contact us</h3>
+            <p class="uk-text-small uk-margin-small-top">You can email us at <a href="#">info@dcapplianceservices.ie</a>, or find us on social media.</p>
+            <ul class="icon-nav uk-grid-collapse uk-child-width-auto" uk-grid>
+              <li>
+                <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+              </li>
+              <li>
+                <a href="" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+              </li>
+              <li>
+                <a href="" class="uk-icon-button" uk-icon="youtube"></a>
+              </li>
+            </ul>
+          {% endif %}
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+  
+  <div class="footer-bottom uk-background-primary uk-light uk-section uk-section-xsmall">
+    <div class="uk-container">
+      <nav class="footer-bottom-navbar">
+        <ul class="uk-child-width-1-1 uk-child-width-auto@m uk-flex uk-flex-middle uk-flex-between@m" uk-grid>
+          <li class="uk-text-center uk-text-left@m">
+            {{ snippets.copyright()|format(now|date('Y'), site.title|e('esc_html')) }}
+          </li>
+          <li class="uk-text-center uk-text-right@m">
+            <ul class="uk-subnav uk-flex uk-flex-center uk-flex-right@m">
+              {% if has_secondary_menu %}
+                {% for item in secondary_menu.get_items %}
+                  <li class="{{ item.classes|join(' ')|e('esc_html') }}">
+                    <a href="{{ item.link|e('esc_url') }}">{{ item.title|e('esc_html') }}</a>
+                  </li>
+                {% endfor %}
+              {% else %}
+                <li class="uk-active">
+                  <a href="#">Home</a>
+                </li>
+                <li class="">
+                  <a href="#">About</a>
+                </li>
+                <li class="">
+                  <a href="#">Blog</a>
+                </li>
+              {% endif %}
+              <li>
+                <a class="uk-margin-small-left" uk-scroll uk-totop></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
 </footer>

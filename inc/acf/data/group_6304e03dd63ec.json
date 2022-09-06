@@ -1,0 +1,44 @@
+{
+    "key": "group_6304e03dd63ec",
+    "title": "Icon Block",
+    "fields": [
+        {
+            "key": "field_6304e05079553",
+            "label": "Icon HTML",
+            "name": "icon_html",
+            "type": "wysiwyg",
+            "instructions": "Add some icon HTML to display an icon",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<i class=\"fa-solid fa-map-pin uk-text-danger fa-2xl\"><\/i>",
+            "tabs": "text",
+            "media_upload": 0,
+            "toolbar": "full",
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/icon-block-section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1661264013
+}

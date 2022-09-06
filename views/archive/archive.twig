@@ -13,7 +13,7 @@
         
         {% if description %}
           <p class="archive-description uk-text-lead uk-margin-remove-bottom">
-            {{ description|e('esc_html') }}
+            {{ description|e('wp_kses_post') }}
           </p>
         {% endif %}
     

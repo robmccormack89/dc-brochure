@@ -1,0 +1,44 @@
+{#
+/**
+ * Block Name: Testimonial/Ratings section
+ *
+ * This is the template that displays the Testimonials block.
+ */
+#}
+
+{% extends "_block.twig" %}
+
+{% block block_content %}
+  {% if (rating or message or heading)  %}
+    <div class="testimonial uk-text-{{align_text|e('esc_html') }}">
+      
+      {# testimonial rating #}
+      {% if rating %}
+        <div class="testimonials__star-rating">
+          {% for i in 1..rating|e('esc_html') %}
+            <span class="testimonials__star">
+              <svg aria-hidden="true" focusable="false" role="presentation" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </span>
+          {% endfor %}
+        </div>
+      {% endif %}
+      
+      {# testimonial content #}
+      {% if message %}
+        <p class="uk-h3 uk-margin-top uk-margin-remove-bottom">
+          {{ message|e('esc_html') }}
+        </p>
+      {% endif %}
+      
+      {# testimonial title #}
+      {% if heading %}
+        <p class="uk-margin-top uk-margin-remove-bottom">
+          {{ heading|e('esc_html') }}
+        </p>
+      {% endif %}
+      
+    </div>
+  {% endif %}
+{% endblock %}

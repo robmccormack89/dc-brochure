@@ -1,0 +1,16 @@
+{% extends 'single.twig' %}
+{% import "_snippets.twig" as snippets %}
+
+{% block header %}
+  {{ parent() }}
+{% endblock %}
+
+{% block main %}
+  <div class="content-editor gutenberg-editor">
+    {{ post.content }}
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {{ parent() }}
+{% endblock %}
