@@ -1,0 +1,31 @@
+#SiteFooter .uk-overlay-primary {
+  background: $footer_overlay;
+}
+
+.footer-bottom .uk-divider-small:after {
+  border-top: 3px solid $theme_primary;
+  content: "";
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
+  width: 60px;
+}
+.footer-bottom .uk-list {
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 0;
+  color: $theme_black;
+  font-size: 15px;
+}
+.footer-bottom .uk-list li {
+  padding-bottom: 5px;
+}
+.footer-bottom .uk-button-small.uk-button-primary {
+  margin-bottom: 5px;
+  font-size: .75rem;
+}
+.footer-bottom > hr {
+  border-top: 3px solid $theme_primary;
+  margin: 0 0 0;
+}

@@ -1,0 +1,53 @@
+@media only screen and (max-width:959px) {
+  #SiteFooter {
+    padding-bottom: 53px;
+  }
+}
+@media (min-width: 960px) {
+  .uk-width-medium\@m {
+      width: 250px;
+  }
+}
+
+@media only screen and (min-device-width:960px) and (max-device-width:1250px) {
+}
+@media only screen and (min-device-width:940px) and (max-device-width:1085px) {
+}
+@media only screen and (max-width:959px) {
+  .cover-img {
+    object-fit: cover;
+    width: 100%;
+    min-height: 400px;
+  }
+  .uk-text-lead {
+    color: $heading_color;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .site-header > .uk-container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+  .sticky-wrap {
+     padding-left: 20px;
+     padding-right: 20px;
+  }
+  #PageHeaderWrap h1.uk-margin-medium-top {
+    margin-top: 10px!important;
+  }
+  #PageHeaderWrap.uk-margin-medium-bottom {
+    margin-bottom: 10px!important;
+  }
+}
+@media only screen and (min-width:960px) {
+  .uk-sticky-below .sticky-wrap {
+     padding-left: 20px;
+     padding-right: 20px;
+  }
+}
+@media only screen and (max-width:959px) {
+  .advform-submit.pull-up-20 {
+    margin-bottom: -50px!important
+  }
+}

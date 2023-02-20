@@ -1,0 +1,47 @@
+{% extends 'base.twig' %}
+{% import "_snippets.twig" as snippets %}
+
+{% block main %}
+  <div class="theme-archive uk-sectionnn uk-background-default" data-template="archive.twig">
+
+    {% block archive_header %}
+      <header class="single-header uk-background-muted">
+        <div class="uk-container uk-padding-small">
+          <h1 class="uk-margin-remove">{{ title|e('esc_html') }}</h1>
+          {% if description %}
+            <p class="uk-text-lead uk-margin-small-top">{{ description|e('esc_html') }}</p>
+          {% endif %}
+        </div>
+      </header>
+    {% endblock %}
+    
+    {% block breads %}
+      {% include '_breads.twig' %}
+    {% endblock %}
+
+    {% block archive_content %}
+      <div class="archive-content uk-container uk-section uk-section-small">
+        <div class="archive-loop">
+          {% if posts is not empty %}
+            <ul class="uk-child-width-1-1 uk-grid-large" uk-grid>
+              {% for post in posts %}
+                <li>
+                  {% include '_tease.twig' %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            {{ snippets.no_posts()|e('esc_html') }}
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+    
+    {% block archive_footer %}
+      <footer class="archive-footer">
+        {% include '_pagination.twig' with {container_class: 'uk-margin-remove-top uk-margin-medium-bottom'} %}
+      </footer>
+    {% endblock %}
+  
+  </div>
+{% endblock %}

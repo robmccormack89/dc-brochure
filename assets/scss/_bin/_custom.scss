@@ -1,0 +1,92 @@
+/* CUSTOM 
+
+*/
+
+/* posts */
+.article-meta>:not(:last-child)::after {
+  content: "•";
+  margin-left: 5px;
+  position: absolute;
+  display: inline-block;
+  font-weight: $boldest_weight;
+}
+.article-meta>:not(:first-child) {
+  margin-left: 18px;
+}
+
+/* follow the socials section */
+.block.block__social {
+  text-align: center;
+  margin-top: 20px;
+}
+.block.block__social .social, .block.block__social h6 {
+  display: inline-block;
+}
+.block.block__social h6 {
+  margin-right: 10px;
+}
+.social {
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+.social .social--item {
+  display: inline-block;
+  margin-right: 5px;
+}
+.social .social--item a {
+  display: block;
+  position: relative;
+  text-align: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  -webkit-transition: background-color .1s ease-in-out;
+  -moz-transition: background-color .1s ease-in-out;
+  -ms-transition: background-color .1s ease-in-out;
+  -o-transition: background-color .1s ease-in-out;
+  transition: background-color .1s ease-in-out;
+}
+.social .social--item a i {
+  line-height: 32px;
+  -webkit-transition: color .1s ease-in-out;
+  -moz-transition: color .1s ease-in-out;
+  -ms-transition: color .1s ease-in-out;
+  -o-transition: color .1s ease-in-out;
+  transition: color .1s ease-in-out;
+}
+.social .social--item a {
+  background-color: $theme_primary;
+}
+.uk-light .social .social--item a {
+  background-color: $theme_primary;
+}
+.social .social--item a i {
+  color: #fff;
+}
+.uk-light .social .social--item a i {
+  color: #fff;
+}
+.social .social--item:active a, .social .social--item:hover a {
+  background-color: $theme_primary;
+}
+.uk-light .social .social--item:active a i, .uk-light .social .social--item:hover a i {
+  color: #fff;
+}
+
+/* breadcrumbs */
+#breadcrumbs .fa-xs {
+  font-size: .2em;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+#breadcrumbs a {
+  font-weight: $boldest_weight;
+}
+
+/* OTHER */
+.your-style {
+  // font-family: 'MicroExtendFLF';
+  // font-weight: bold;
+  // font-style: normal;
+}

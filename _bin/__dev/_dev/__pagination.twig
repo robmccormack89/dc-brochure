@@ -1,0 +1,52 @@
+{% import "_snippets.twig" as snippets %}
+
+{% if (posts.pagination.next or posts.pagination.prev) %}
+  <nav class="pagination archive-pagination {{ container_class|default('uk-margin-large-top') }}">
+    <ul class="uk-pagination uk-flex-center uk-margin-remove">
+      
+      {% if posts.pagination.prev %}
+        <li>
+          <a href="{{ posts.pagination.prev.link|e('esc_url') }}" data-link="{{ posts.pagination.prev.link|e('esc_url') }}" class="prev">
+            {{ snippets.pagi_left_icon_small()|e('wp_kses_post') }} {{ snippets.prev_page|e('esc_html') }}
+          </a>
+        </li>
+      {% endif %}
+      
+      {% for page in posts.pagination.pages %}
+        <li class="{{ ('current' in page.class) ? 'uk-active' }}">
+          {% if page.link %}
+            <a href="{{ page.link|e('esc_url') }}" class="{{ page.class|e('esc_html') }}" data-link="{{ page.link|e('esc_url') }}">{{ page.title|e('esc_html') }}</a>
+          {% else %}
+            <span class="{{ page.class|e('esc_html') }}">{{ page.title|e('esc_html') }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+      
+      {% if posts.pagination.next %}
+        <li>
+          <a href="{{ posts.pagination.next.link|e('esc_url') }}" data-link="{{ posts.pagination.next.link|e('esc_url') }}" class="next">
+            {{ snippets.next_page|e('esc_html') }} {{ snippets.pagi_right_icon_small()|e('wp_kses_post') }}
+          </a>
+        </li>
+      {% endif %}
+      
+    </ul>
+  </nav>
+{% endif %}
+
+{% if posts.pagination.next %}
+  <div class="page-load-status">
+    <div class="loader-ellips infinite-scroll-request">
+      <span class="loader-ellips__dot"></span>
+      <span class="loader-ellips__dot"></span>
+      <span class="loader-ellips__dot"></span>
+      <span class="loader-ellips__dot"></span>
+    </div>
+    <p class="infinite-scroll-last">End of products</p>
+    <p class="infinite-scroll-error">No more products to load</p>
+  </div>
+
+  <div class="uk-margin-top uk-flex uk-flex-center">
+    <button class="view-more-button uk-button uk-button-primary uk-text-bold uk-text-uppercase uk-border-rounded">Load more products</button>
+  </div>
+{% endif %}
