@@ -6,5 +6,10 @@
   },
   "autoload": {
       "psr-4": { "Rmcc\\": ["inc/", "inc/acf/"] }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
   }
 }
