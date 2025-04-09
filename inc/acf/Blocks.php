@@ -1,4 +1,5 @@
 <?php
+
 namespace Rmcc;
 use Timber\Timber;
 use Timber\Post;

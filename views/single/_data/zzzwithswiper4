@@ -1,0 +1,285 @@
+<!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"field_61d76f01c14b7":"260","field_626756573afe1":"rgba(255,255,255,0.8)","field_620e46bf11699":"uk-containerrr-expand uk-padddding-remove"},"align":"full","mode":"preview","fullHeight":false} -->
+
+<!-- wp:group -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"hor-div uk-text-small uk-margin-remove-bottom uk-text-uppercase uk-text-emphasis"} -->
+<p class="hor-div uk-text-small uk-margin-remove-bottom uk-text-uppercase uk-text-emphasis">dcapplianceservices</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1,"style":{"color":{"text":"#004d74"}},"className":"uk-text-bold uk-heading-medium uk-margin-remove-top uk-margin-remove-bottom"} -->
+<h1 class="wp-block-heading uk-text-bold uk-heading-medium uk-margin-remove-top uk-margin-remove-bottom has-text-color" style="color:#004d74">Service &amp; Repairs of</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":1,"style":{"color":{"text":"#eb4040"}},"className":"uk-text-bold uk-heading-medium uk-margin-remove-top"} -->
+<h1 class="wp-block-heading uk-text-bold uk-heading-medium uk-margin-remove-top has-text-color" style="color:#eb4040">Domestic &amp; Commercial Appliances</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left","className":"uk-text-lead"} -->
+<p class="has-text-align-left uk-text-lead">At DC Appliances Service &amp; Repairs, we specialize in Dishwashers, Fridges &amp; Freezers; Ovens, Washing Machines, Air Conditioning, Cold &amp; Freezer Rooms You can be confident that you will receive high quality repairs at a fair price.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"},"typography":{"fontSize":"16px"},"color":{"background":"#eb4040"}},"className":"uk-text-bold uk-text-decoration-none"} -->
+<div class="wp-block-button has-custom-font-size uk-text-bold uk-text-decoration-none" style="font-size:16px"><a class="wp-block-button__link has-background wp-element-button" style="border-radius:0px;background-color:#eb4040" rel="#">Primary</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"style":{"border":{"radius":"0px"},"color":{"background":"#004d74"},"typography":{"fontSize":"16px"}},"className":"uk-text-bold uk-text-decoration-none"} -->
+<div class="wp-block-button has-custom-font-size uk-text-bold uk-text-decoration-none" style="font-size:16px"><a class="wp-block-button__link has-background wp-element-button" style="border-radius:0px;background-color:#004d74" rel="#">Secondary</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:spacer {"height":"60px"} -->
+<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer --></div>
+<!-- /wp:group -->
+<!-- /wp:acf/cover-section -->
+
+<!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"field_61d76f01c14b7":"","field_626756573afe1":"","field_620e46bf11699":"uk-padding-remove-vertical"},"align":"full","mode":"preview","fullHeight":false,"className":"pull-up-60"} -->
+<!-- wp:columns {"verticalAlignment":"center","className":"small-gaps"} -->
+<div class="wp-block-columns are-vertically-aligned-center small-gaps"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"field_61d76f01c14b7":"260","field_626756573afe1":"rgba(30,115,190,0.79)","field_620e46bf11699":"uk-padding uk-light"},"align":"full","mode":"preview","fullHeight":false} -->
+<!-- wp:paragraph {"className":"hor-div uk-text-small uk-margin-remove-bottom uk-text-emphasis"} -->
+<p class="hor-div uk-text-small uk-margin-remove-bottom uk-text-emphasis">DCAPPLIANCESERVICES</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textColor":"white","className":"uk-margin-remove-top"} -->
+<h2 class="wp-block-heading uk-margin-remove-top has-white-color has-text-color">Service &amp; Repairs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Avantage Group is all about strategy, we’re here to inform which tactics need funding and which are drains on resources.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"typography":{"fontSize":"15px"},"border":{"radius":"0px"},"color":{"background":"#eb4040"}},"className":"uk-text-bold uk-text-decoration-none"} -->
+<div class="wp-block-button has-custom-font-size uk-text-bold uk-text-decoration-none" style="font-size:15px"><a class="wp-block-button__link has-background wp-element-button" style="border-radius:0px;background-color:#eb4040">Read more</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+<!-- /wp:acf/cover-section --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"field_61d76f01c14b7":"259","field_626756573afe1":"rgba(226,226,226,0.9)","field_620e46bf11699":"uk-padding uk-dark"},"align":"full","mode":"preview","fullHeight":false} -->
+<!-- wp:paragraph {"className":"hor-div uk-text-small uk-margin-remove-bottom uk-text-emphasis"} -->
+<p class="hor-div uk-text-small uk-margin-remove-bottom uk-text-emphasis">DCAPPLIANCESERVICES</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"style":{"color":{"text":"#004d74"}},"className":"uk-margin-remove-top"} -->
+<h2 class="wp-block-heading uk-margin-remove-top has-text-color" style="color:#004d74">Commercial</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Avantage Group is all about strategy, we’re here to inform which tactics need funding and which are drains on resources.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"},"typography":{"fontSize":"15px"},"color":{"background":"#eb4040"}},"className":"uk-text-bold uk-text-decoration-none"} -->
+<div class="wp-block-button has-custom-font-size uk-text-bold uk-text-decoration-none" style="font-size:15px"><a class="wp-block-button__link has-background wp-element-button" style="border-radius:0px;background-color:#eb4040">Read more</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+<!-- /wp:acf/cover-section --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"field_61d76f01c14b7":"237","field_626756573afe1":"rgba(221,51,51,0.8)","field_620e46bf11699":"uk-padding uk-light"},"align":"full","mode":"preview","fullHeight":false} -->
+<!-- wp:paragraph {"className":"hor-div hor-div-blue uk-text-small uk-margin-remove-bottom uk-text-emphasis"} -->
+<p class="hor-div hor-div-blue uk-text-small uk-margin-remove-bottom uk-text-emphasis">DCAPPLIANCESERVICES</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textColor":"white","className":"uk-margin-remove-top"} -->
+<h2 class="wp-block-heading uk-margin-remove-top has-white-color has-text-color">Domestic</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Avantage Group is all about strategy, we’re here to inform which tactics need funding and which are drains on resources.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"},"typography":{"fontSize":"15px"},"color":{"background":"#004d74"}},"className":"uk-text-bold uk-text-decoration-none"} -->
+<div class="wp-block-button has-custom-font-size uk-text-bold uk-text-decoration-none" style="font-size:15px"><a class="wp-block-button__link has-background wp-element-button" style="border-radius:0px;background-color:#004d74">Read more</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+<!-- /wp:acf/cover-section --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+<!-- /wp:acf/cover-section -->
+
+<!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"img":"","_img":"field_61d76f01c14b7","bg_colour":"","_bg_colour":"field_626756573afe1","block_custom_classes":"uk-container uk-section","_block_custom_classes":"field_620e46bf11699"},"align":"full","mode":"preview","fullHeight":false} -->
+<!-- wp:group -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"hor-div uk-text-uppercase uk-text-emphasis uk-margin-remove-bottom"} -->
+<p class="hor-div uk-text-uppercase uk-text-emphasis uk-margin-remove-bottom">WHERE CAN WE HELP YOU</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group -->
+<div class="wp-block-group"><!-- wp:heading {"className":"uk-heading-medium uk-margin-remove-top"} -->
+<h2 class="wp-block-heading uk-heading-medium uk-margin-remove-top"><span class="uk-text-secondary">Consultancy</span><br><span class="uk-text-danger">Industries</span></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Nanotechnology immersion along the information highway will close the loop on <br>focusing solely on the bottom line. Override the digital divide with additional <br>clickthroughs from DevOps.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:acf/icon-block-section {"name":"acf/icon-block-section","data":{"icon_html":"\u003ci class=\u0022fa-solid fa-map-pin uk-text-danger fa-2xl\u0022\u003e\u003c/i\u003e","_icon_html":"field_6304e05079553"},"mode":"preview","alignText":"left","alignContent":"center"} -->
+<!-- wp:heading {"className":"uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top"} -->
+<h2 class="wp-block-heading uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top">Solicitory</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left","className":"uk-margin-small-top"} -->
+<p class="has-text-align-left uk-margin-small-top">Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:acf/icon-block-section --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:acf/icon-block-section {"name":"acf/icon-block-section","data":{"icon_html":"\u003ci class=\u0022fa-solid fa-map-pin uk-text-danger fa-2xl\u0022\u003e\u003c/i\u003e","_icon_html":"field_6304e05079553"},"mode":"preview","alignText":"left","alignContent":"center"} -->
+<!-- wp:heading {"className":"uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top"} -->
+<h2 class="wp-block-heading uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top">Business Planning</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left","className":"uk-margin-small-top"} -->
+<p class="has-text-align-left uk-margin-small-top">Podcasting operational change management inside of workflows to establish a framework.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:acf/icon-block-section --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:acf/icon-block-section {"name":"acf/icon-block-section","data":{"icon_html":"\u003ci class=\u0022fa-solid fa-map-pin uk-text-danger fa-2xl\u0022\u003e\u003c/i\u003e","_icon_html":"field_6304e05079553"},"mode":"preview","alignText":"left","alignContent":"center"} -->
+<!-- wp:heading {"className":"uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top"} -->
+<h2 class="wp-block-heading uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top">Human Resources</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left","className":"uk-margin-small-top"} -->
+<p class="has-text-align-left uk-margin-small-top">Podcasting operational change management inside of workflows to establish a framework.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:acf/icon-block-section --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:acf/icon-block-section {"name":"acf/icon-block-section","data":{"icon_html":"\u003ci class=\u0022fa-solid fa-map-pin uk-text-danger fa-2xl\u0022\u003e\u003c/i\u003e","_icon_html":"field_6304e05079553"},"mode":"preview","alignText":"left","alignContent":"center"} -->
+<!-- wp:heading {"className":"uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top"} -->
+<h2 class="wp-block-heading uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top">Strategy</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left","className":"uk-margin-small-top"} -->
+<p class="has-text-align-left uk-margin-small-top">Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:acf/icon-block-section --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:acf/icon-block-section {"name":"acf/icon-block-section","data":{"icon_html":"\u003ci class=\u0022fa-solid fa-map-pin uk-text-danger fa-2xl\u0022\u003e\u003c/i\u003e","_icon_html":"field_6304e05079553"},"mode":"preview","alignText":"left","alignContent":"center"} -->
+<!-- wp:heading {"className":"uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top"} -->
+<h2 class="wp-block-heading uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top">Start Ups</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left","className":"uk-margin-small-top"} -->
+<p class="has-text-align-left uk-margin-small-top">Podcasting operational change management inside of workflows to establish a framework.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:acf/icon-block-section --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:acf/icon-block-section {"name":"acf/icon-block-section","data":{"icon_html":"\u003ci class=\u0022fa-solid fa-map-pin uk-text-danger fa-2xl\u0022\u003e\u003c/i\u003e","_icon_html":"field_6304e05079553"},"mode":"preview","alignText":"left","alignContent":"center"} -->
+<!-- wp:heading {"className":"uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top"} -->
+<h2 class="wp-block-heading uk-text-secondary uk-h3 uk-margin-small-bottom uk-margin-remove-top">Organisations</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left","className":"uk-margin-small-top"} -->
+<p class="has-text-align-left uk-margin-small-top">Podcasting operational change management inside of workflows to establish a framework.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:acf/icon-block-section --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:html -->
+<hr>
+<!-- /wp:html -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"},"color":{"background":"#004d74"}},"className":"is-style-fill dont-underline uk-text-bold"} -->
+<div class="wp-block-button is-style-fill dont-underline uk-text-bold"><a class="wp-block-button__link has-background wp-element-button" style="border-radius:0px;background-color:#004d74">Go to Page</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+<!-- /wp:acf/cover-section -->
+
+<!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"img":"","_img":"field_61d76f01c14b7","bg_colour":"rgb(242,242,242)","_bg_colour":"field_626756573afe1","block_custom_classes":"uk-container-expand uk-padding-remove","_block_custom_classes":"field_620e46bf11699"},"align":"full","mode":"preview","fullHeight":false} -->
+<!-- wp:group {"align":"full"} -->
+<div class="wp-block-group alignfull"><!-- wp:columns {"className":"uk-margin-remove uk-width-1-1 gap-0"} -->
+<div class="wp-block-columns uk-margin-remove uk-width-1-1 gap-0"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"field_61d76f01c14b7":"256","field_626756573afe1":"rgba(244,244,244,0.61)","field_620e46bf11699":"uk-height-xlarge"},"align":"full","mode":"preview","fullHeight":false} /--></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"uk-flex uk-flex-middle"} -->
+<div class="wp-block-column uk-flex uk-flex-middle"><!-- wp:group {"className":"uk-padding-large"} -->
+<div class="wp-block-group uk-padding-large"><!-- wp:paragraph {"className":"hor-div uk-text-uppercase uk-text-emphasis uk-margin-remove-bottom"} -->
+<p class="hor-div uk-text-uppercase uk-text-emphasis uk-margin-remove-bottom">GROWING WITH OUR CLIENTS</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4,"className":"uk-heading-small uk-margin-remove-top"} -->
+<h4 class="wp-block-heading uk-heading-small uk-margin-remove-top"><span class="uk-text-secondary">30 Years of</span><br><span class="uk-text-danger">Experience</span></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+<!-- /wp:acf/cover-section -->
+
+<!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"img":"","_img":"field_61d76f01c14b7","bg_colour":"rgb(242,242,242)","_bg_colour":"field_626756573afe1","block_custom_classes":"uk-container-expand uk-padding-remove","_block_custom_classes":"field_620e46bf11699"},"align":"full","mode":"preview","fullHeight":false} -->
+<!-- wp:group {"align":"full"} -->
+<div class="wp-block-group alignfull"><!-- wp:columns {"className":"uk-margin-remove uk-width-1-1 gap-0"} -->
+<div class="wp-block-columns uk-margin-remove uk-width-1-1 gap-0"><!-- wp:column {"className":"uk-flex uk-flex-middle"} -->
+<div class="wp-block-column uk-flex uk-flex-middle"><!-- wp:group {"className":"uk-padding-large"} -->
+<div class="wp-block-group uk-padding-large"><!-- wp:paragraph {"className":"hor-div uk-text-uppercase uk-text-emphasis uk-margin-remove-bottom"} -->
+<p class="hor-div uk-text-uppercase uk-text-emphasis uk-margin-remove-bottom">GROWING WITH OUR CLIENTS</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textAlign":"left","level":4,"className":"uk-heading-small uk-margin-remove-top"} -->
+<h4 class="wp-block-heading has-text-align-left uk-heading-small uk-margin-remove-top"><span class="uk-text-secondary">30 Years of</span><br><span class="uk-text-danger">Experience</span></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"field_61d76f01c14b7":"250","field_626756573afe1":"rgba(244,244,244,0.61)","field_620e46bf11699":"uk-height-xlarge"},"align":"full","mode":"preview","fullHeight":false} /--></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+<!-- /wp:acf/cover-section -->
+
+<!-- wp:acf/cover-section {"name":"acf/cover-section","data":{"img":"","_img":"field_61d76f01c14b7","bg_colour":"rgb(221,51,51)","_bg_colour":"field_626756573afe1","block_custom_classes":"","_block_custom_classes":"field_620e46bf11699"},"align":"full","mode":"preview","fullHeight":false,"className":"uk-light"} -->
+<!-- wp:columns {"className":"uk-margin-remove uk-width-1-1 swipee-wrap"} -->
+<div class="wp-block-columns uk-margin-remove uk-width-1-1 swipee-wrap"><!-- wp:column {"className":"swiper mySwiper"} -->
+<div class="wp-block-column swiper mySwiper"><!-- wp:group {"className":"swiper-wrapper","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group swiper-wrapper"><!-- wp:group {"className":"uk-width-1-1 swiper-slide"} -->
+<div class="wp-block-group uk-width-1-1 swiper-slide"><!-- wp:acf/testimonial-section {"name":"acf/testimonial-section","data":{"rating":"5","_rating":"field_60d37f52d3310","heading":"- Some Person","_heading":"field_6202922ca64cf","msg":"\u0022Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt\u0022","_msg":"field_6202923ba64d0"},"mode":"preview","alignText":"center"} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"uk-width-1-1 swiper-slide"} -->
+<div class="wp-block-group uk-width-1-1 swiper-slide"><!-- wp:acf/testimonial-section {"name":"acf/testimonial-section","data":{"rating":"5","_rating":"field_60d37f52d3310","heading":"- Another Person","_heading":"field_6202922ca64cf","msg":"\u0022Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt\u0022","_msg":"field_6202923ba64d0"},"mode":"preview","alignText":"center"} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"uk-width-1-1 swiper-slide"} -->
+<div class="wp-block-group uk-width-1-1 swiper-slide"><!-- wp:acf/testimonial-section {"name":"acf/testimonial-section","data":{"rating":"5","_rating":"field_60d37f52d3310","heading":"- Yet another Person","_heading":"field_6202922ca64cf","msg":"\u0022Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt\u0022","_msg":"field_6202923ba64d0"},"mode":"preview","alignText":"center"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:acf/swiper-script- {"name":"acf/swiper-script-","data":{"key":"swiper","_key":"field_63077ffaa9937","target":".mySwiper","_target":"field_63078007a9938","slidesPerView":"1","_slidesPerView":"field_6307803da993a","spaceBetween":"0","_spaceBetween":"field_6307806ba993b","centeredSlides":"0","_centeredSlides":"field_63078010a9939","autoplay":"0","_autoplay":"field_630780b6a993c","navigation":"0","_navigation":"field_63078108a993e","pagination":"1","_pagination":"field_63078114a993f","pagination_type":"0","_pagination_type":"field_630783cac338c","pagination_dynamicBullets":"0","_pagination_dynamicBullets":"field_63078392c338b"},"mode":"preview"} /--></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+<!-- /wp:acf/cover-section -->
+
+
+
